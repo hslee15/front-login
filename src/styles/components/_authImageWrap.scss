@@ -1,0 +1,78 @@
+@import "../common/variables";
+
+.login-image-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $gradient-gray-medium;
+  position: relative;
+
+  .hotel-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hotel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .hotel-image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .hotel-image-text {
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .hotel-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      padding: $spacing-xl;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      pointer-events: none;
+
+      .hotel-image-title {
+        color: #fff;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        margin: 0;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
